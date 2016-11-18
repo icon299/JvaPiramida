@@ -24,19 +24,20 @@ public class JavaPiramida {
         return piramida[row-1][pos-1];
     }
     public static void main(String[] args) {
+        final int MAX_ROW = 10000;
         try {
             System.out.println("\nLets calculate block in pyramid\n");
-            System.out.println("How many rows in your pyramid?(max 1000):");
+            System.out.println("How many rows in your pyramid?("+MAX_ROW +"):");
             Scanner sc = new Scanner(System.in);
             int InRow = sc.nextInt();
-            System.out.println("Whitch block calculate?(max 1000):");
+            System.out.println("Whitch block calculate?("+MAX_ROW +"):");
             int InCol = sc.nextInt();
 
 
 
 //      int InRow = 1000;
 //      int InCol = 500;
-            if ((InCol > InRow)||InRow<=0||InCol<=0||InRow>10000||InCol>10000)
+            if ((InCol > InRow)||InRow<=0||InCol<=0||InRow>MAX_ROW||InCol>MAX_ROW)
                 System.out.printf("%d:%d - Error in input values\n",InRow,InCol);
             else {
 
